@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web:
+    image: gebruikersnaam/action-learning-pathway:latest
+    ports:
+      - "80:3000"
+  php:
+    build: .
+    container_name: apache_php
+    ports:
+      - "8080:80"
+
+  mysql:
+    image: mysql:latest
+    container_name: deelopdrachtwebshop9-php 
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: website_db
+      MYSQL_USER: website_user
+      MYSQL_PASSWORD: your_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata: ~

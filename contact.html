@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl_BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map.css">
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="js/mapScript.js" defer=""></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/Images/Logo.png" alt="inspired-logo" width="100px" id="logo">
+        </a>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html" class="button">Home</a>
+            </li>
+        
+            <li>
+                <a href="shop.html" class="button">Shop</a>
+            </li>
+        
+            <li>
+                <a href="contact.html" class="button"> Contact</a>
+            </li>
+            <li>
+                <a href="klanten.html" class="button">Klanten</a>
+            </li>
+            <li>
+                <search>
+                    <form action="#">
+                        <label>
+                        <img src="assets/Images/searchblack.png" width="130px" height="130px"><input type="search" id="query" placeholder="zoeken">
+                        </label>
+                    </form>
+                </search>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="contact">
+            <h2>contact</h2>
+            <form action="#" method="post" class="contactform">
+                <fieldset>
+					        <legend>gegevens</legend>
+                    <label for="name">voor- en achternaam<span>*</span></label>
+                    <input type="text" name="name" placeholder="voor- en achternaam" required=""><br>
+                    <label for="email">e-mail<span>*</span></label>
+                    <input type="email" name="email" placeholder="e-mail" required=""><br>
+                </fieldset>
+				        <fieldset>
+					        <legend>vraag</legend>
+                    <label for="contactperson">vraag is gericht aan<span>*</span></label>
+                    <select name="contactperson" id="contactperson" required="">
+                        <option value="">-- maak hier een keuze --</option>
+                        <option value="Bestemming">Bestemming</option>
+                        <option value="Betalingswijze">betalingswijze</option>
+                        <option value="transport">transport</option>
+                    </select>
+                    <label for="message">bericht<span>*</span></label>
+                <textarea name="message" id="message" placeholder="bericht" rows="6" required=""></textarea><br>
+                </fieldset>
+                <p><span>*</span> zijn verplicht in te vullen velden.</p>
+                <button type="submit" value="verzenden" id="contact-btn">verzenden</button>
+            </form>
+            
+            
+        </section>
+        <h1> Vind ons op de kaart</h1>
+        <section id="IMapPos">
+            <div id="IMap"></div>
+        </section>
+    </main>
+
+    <aside>
+        <ul class="AsideInfo">
+            <li>Adres: Melkmarkt 37-39 2000 Antwerpen</li>
+            <li>Tel: +32468239222</li>
+            <li>Email: inpired@gmail.com</li>
+            <li>Hou ons social media account in de gaten voor de laatste updates </li>
+            
+        </ul>
+    </aside>
+
+    <footer>
+        <a href="#logo"><img src="assets/Images/Logo.png" alt="logobottom" width="100px"></a><br>
+            
+        <h2>Socials of Inspired</h2>
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/"><img src="assets/Images/Instagram.png" alt="logobottom" width="50px"></a>
+            </li>
+            <li>
+                <a href="https://nl-nl.facebook.com/"><img src="assets/Images/facebook.png" alt="logobottom" width="50px"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/?lang=nl"><img src="assets/Images/twitter.png" alt="logobottom" width="50px"></a>
+            </li>
+        </ul>
+
+    </footer>
+    
+</body>
+</html>

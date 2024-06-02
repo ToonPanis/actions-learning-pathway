@@ -1,0 +1,16 @@
+#IMap{
+    
+    height: 20vh;
+    width: 50vw;
+    
+}
+#IMapPos{
+    display:flex;
+    justify-content: center;
+    margin-top:2rem;
+    
+   
+
+    
+
+}

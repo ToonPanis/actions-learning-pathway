@@ -1,0 +1,924 @@
+html,body{
+    display:grid;
+    background-color:#F2F2F2;
+    grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "main main main aside"
+    "footer footer footer footer";
+    font-family:Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+
+
+h1,h2{
+    font-weight:bold;
+    color:#92A4A6;
+
+}
+
+h1{
+    font-size: 2.2rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+
+
+/*--------header------------*/
+
+
+
+header{
+    margin:auto;
+    text-align: center;
+    grid-area: header;
+    width:30%;
+}
+header img{
+    width:35%;
+}
+#logo{
+    width:120px;
+}
+#teaser{
+    grid-area: header;
+    background-image: url("../assets/Images/pexels-alexandre-saraiva-carniato-1838144F3.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 60rem;
+    margin-bottom: 2rem;
+
+
+    
+}
+#teaser figure{
+    text-align: center;
+    padding-top:2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    margin: 10rem 0rem 10rem 0rem;
+    background-color: rgba(24, 64, 60, 50%);
+    color:#ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    
+}
+#teaser figure img{
+    background-color: rgba(24, 64, 60, 50%);
+
+}
+
+#intro{
+    display:flex;
+    justify-content: center;
+
+}
+#intro img{
+    width:100%;
+}
+
+
+/*-----------navigatie----------*/
+
+
+nav{
+    grid-area: nav;
+    display: inline-block;
+    text-align: center;
+    margin: auto auto auto auto;
+    font-size: 1rem;
+    border-bottom: 1px solid #92A4A6;
+    color:#92A4A6;
+    padding-top:1rem;
+    padding-bottom:1rem;
+
+}
+nav > ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    vertical-align: top;
+}
+
+nav > li{
+    margin-top: 4rem;
+    margin-right: 1rem;
+}
+nav > ul > li {
+    list-style: none;
+    display: inline-block;
+}
+nav > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #92A4A6;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    margin: 4rem 1rem 0 0;
+  }
+  nav > ul > li > a:hover, .active{
+    letter-spacing: 0.25rem;
+    font-weight: bold;
+    color: #92A4A6;
+
+  }
+  nav li img {
+    height: 1rem;
+    width: auto;
+    vertical-align: bottom;
+    display: inline;
+  }
+  
+  input[type=search] {
+    box-sizing: border-box;
+    margin-left: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline;
+  }
+
+  /*-------main---------*/
+
+
+main{
+    grid-area: main; 
+    width:100%;
+    text-align: center;
+  
+}
+
+
+/*-----------aside---------------*/
+
+aside{
+    grid-area: aside; 
+    text-align: center;
+    margin: 2rem 2rem 2rem 2rem;   
+    background-color: #18403c8f;
+    border-radius: 5px;
+    height:100%;
+}
+/*---------AsideInfo---------*/
+.AsideInfo{
+    color:#F2F2F2;
+    font-size: larger;
+    letter-spacing: 0.1rem;
+    margin: 1rem 1rem 1rem 1rem;
+
+}
+@keyframes fade-in-aside {
+    from {
+      opacity: 0;
+      transform: translateX(+200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Stijl voor de aside sectie */
+  aside {
+    /* Voorgaande stijlen blijven ongewijzigd */
+  
+    /* Voeg de animatie toe aan het element */
+    animation: fade-in-aside 1s ease-out forwards;
+   
+    animation-delay: 0.0s;
+  }
+.AsideInfo > li{
+    margin-top: 1rem;
+}
+/*----aside winkelmand-----------*/
+.BuyItem{
+    font-size: 10px;
+    background-color: rgb(38, 62, 62);
+    border-radius: 5px;
+    padding: 1px 1px 1px 1px;
+    margin: 4px 4px 4px 4px;
+    justify-content: inline;
+}
+    
+.product-btn{
+    background-color: #18403C;
+    border-radius: 3px;
+    margin: 2rem 2rem 2rem 2rem;
+    font-size: 10px;
+}
+    
+.Producten ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    
+}
+/* Aside Shop */
+
+h2{
+    color:#F2F2F2;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    margin: 0.5rem 1rem 0rem 1rem;
+}
+
+
+.tekst{
+    margin-bottom:1rem;
+    margin-top:1rem;
+}
+#winkelmand-lijst {
+    list-style: none;
+    padding: 0;
+    box-shadow: 0 0 10px #92A4A6;
+}
+  
+  /* Opmaak voor elk item in de winkelmand */
+  #winkelmand-lijst li {
+    display:flex;
+    justify-content: center;
+    /*haal de flex er terug uit om afbeeldingen op rechte lijn te krijgen*/
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color:#F2F2F2;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  /* Opmaak voor de productafbeelding */
+  .product-img {
+    max-width: 80px;
+    margin-right: 20px;
+    
+
+  }
+  
+  /* Opmaak voor de plus- en minknoppen en het aantal */
+  .aantal-buttons {
+    display: flex;
+    flex-direction: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .aantal-buttons button {
+    
+    padding: 5px 10px;
+    margin: 20px 20px;
+    background-color: #f0f0f0;
+    color:#18403C;
+    border-radius: 3px;
+  }
+  
+  /* Opmaak voor de totaalprijs */
+  #totaal-bedrag {
+    margin-top: 20px;
+    font-weight: bold;
+    color:#F2F2F2;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .product-info span {
+    color: #F2F2F2; 
+  }
+  .product-info{
+    width: 12rem;
+  }
+
+  /*wishlist*/
+
+  .wishlist-btn img {
+    /* Standaard kleur voor het hartje */
+    filter: grayscale(1); /* Zet het hartje naar grijstinten */
+    
+}
+
+/* Stijlen voor het hartje als het product op de wishlist staat */
+.wishlist-btn.on-wishlist img {
+    
+    filter: none; /* Geen grijstinten meer */
+}
+.verwijder-btn{
+    
+    color:#ffffff;
+    background-color: #18403C;
+    border-radius: 3px;
+    margin-left:2rem;
+    padding:0.4em 0.8em 0.4em 0.8em;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    margin-right:2rem;
+}
+
+#afrekenen-btn{
+    color:#ffffff;
+    background-color: #18403C;
+    border-radius: 3px;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    padding:1em 2em 1em 2em;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+/*--------------Shop pagina----------*/
+
+
+#ProductenArrangement{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.Producten {
+    width: 20%;
+    max-width: 400px;
+    margin-right:0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px #92A4A6;
+    background-color: #92A4A6;
+    color:#F2F2F2;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.Producten, figcaption {
+    margin-top: 1rem;
+    margin-bottom:1rem;
+}
+
+
+
+/*footer*/
+
+footer{
+    grid-area: footer;
+    bottom: 0;
+    margin: 1rem 0rem 1rem 0rem;
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+    width: 100%;
+    background-color:#F2F2F2;
+}
+footer > ul{
+    list-style: none;
+}
+
+footer > ul >li{
+    display: inline-block;
+}
+
+#intro {
+    width: 80%;
+    display: grid;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    grid-template-areas:
+    "IFoto"
+    "ITekst";
+}
+#IFoto{
+    width: 95%;
+    margin-top: 2rem;
+}
+#ITekst {
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    border-bottom: 1px solid  #92A4A6;
+    letter-spacing: 0.1rem;
+    padding-bottom: 2rem;
+    
+
+}
+
+#FeaturedProducts{
+   
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 4rem;
+    gap:2rem;  
+}
+
+
+#RelatedProducts > a{
+    width: 100%;
+   display:flex;
+   justify-content: center;
+}
+
+.FPF{
+    
+    width: 40%;
+    max-width:400px;
+    box-shadow: 0 0 10px #92A4A6;
+    background-color: #92A4A6;
+    color:#F2F2F2;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    margin:1rem 0rem 1rem 1rem;
+}
+#Newsletter{
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    
+   
+}
+#NTitel{
+    margin-top:2rem;
+    font-size:1.8rem;
+}
+#NTekst{
+    margin: 2rem 4rem 2rem 4rem;
+    
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-size:1.3rem;
+}
+#Aanbevelingen{
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#ATitel{
+    margin-top:2rem;
+    font-size:1.8rem;
+}
+    
+#ATekst{
+    margin: 2rem 4rem 2rem 4rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-size:1.3rem;  
+}
+
+#RelatedProducts {
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 4rem;
+    gap:2rem;  
+}
+
+.RPimages  {
+    width: 40%;
+    max-width:400px;
+    box-shadow: 0 0 10px #92A4A6;
+    background-color: #92A4A6;
+    color:#F2F2F2;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    margin:1rem 0rem 1rem 1rem;
+}
+
+#RPTitel{
+    font-size:1.8rem;
+}
+
+#About{
+    width: 60%;
+    margin:auto;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+    
+}
+
+#About img{
+    float:right;
+    clear:right; 
+    margin: 0rem 1rem 1rem 1rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+
+#About h2{
+    margin: 1rem 1rem 1rem 1rem;
+    padding-bottom: 2rem;
+    font-size:1.8rem;
+}
+
+#About p{
+    text-align: justify;
+    text-align-last: center;
+    margin: 1rem 1rem 1rem 1rem;
+    padding-top: 1rem;
+    font-size:1.2rem;
+}
+
+
+
+/*Productpagina*/
+#Productfoto{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    margin-top: 4rem;
+    padding-bottom: 8rem; 
+    
+}
+
+#Foto1 {
+    
+    flex:1;
+    width: 100%;
+    max-width: 400px; 
+    margin-right:2rem;
+    box-shadow: 0 0 10px #92A4A6;
+}
+
+#Productfoto-lijst{
+    flex: 1;
+    width:100%;
+    margin-left:2rem;
+
+}
+
+#Productfoto-lijst > li{
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+#SMTitle{
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+#SMTitle > ul{
+    display: flex;
+    flex-direction: row wrap; 
+    justify-content: space-around;
+    align-items: center; 
+    
+}
+
+.SMFoto{
+
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    margin-left:1rem;
+    margin-right:1rem;
+    flex:1;
+}
+
+.SMFoto img {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px #92A4A6;
+
+}
+
+#Productfoto > ul > li > button{
+    color:#F2F2F2;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+}
+
+#Reviews{
+    width: 80%;
+    display: grid;
+    margin: auto;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #92A4A6;
+    text-align: center;
+    grid-template-areas:
+    "RTitle"
+    "P1"
+    "P2";
+}
+
+#RTitle{
+    grid-area:RTitle;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom:2rem;
+}
+
+#P1{
+    grid-area:P1;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+#P2{
+    grid-area:P2;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+/*Contactpagina*/
+
+#contact{
+    max-width:100%;
+}
+
+input[type=search] {
+    box-sizing: border-box;
+    margin-left: 0.2rem;
+    border: 1px solid #92A4A6;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline;
+}
+ 
+main h2{
+    font-size: large;
+    text-transform: uppercase;
+    color: #18403C;
+    margin-top: 2rem;
+    margin-bottom:0rem;
+    margin-left:2rem;
+    margin-right:2rem;
+}
+ 
+#contact article{
+    padding-bottom: 2rem;
+}
+
+#contact article{
+    padding-bottom: 2rem;
+    
+}
+  
+  #contact fieldset {
+    padding: 0rem 20rem 1rem 20rem;  
+}
+  
+#contact legend {
+    
+    color: #92A4A6;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 1rem 0rem 1rem 0rem;
+}
+  
+.contactform h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.2rem; 
+}
+  
+.contactform label {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    color: #92A4A6;
+    text-align: left;
+    padding: 0rem 0rem 1rem 0rem;
+}
+
+  span{
+    color: #92A4A6;
+    text-align: center;
+    margin-left: 0rem;
+    margin-bottom: 2rem;
+}
+  
+.contactform input, .contactform textarea, .contactform select {
+    background: transparent;
+    width:100%;
+    border: 0;
+    border: 1px solid #92A4A6;
+    color:#92A4A6;
+    margin-bottom: 1rem;
+    padding: 1rem 0rem 0.5rem 0.5rem;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+   ::placeholder {
+   color:#7d7d7d;
+}
+#contact-btn{
+    background-color: #18403C;
+    color:#F2F2F2;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+/*------------Klanten----------*/
+.klanten-container{
+    
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+}
+
+/*media*/
+
+
+@media (max-width:1700px){
+        .product-btn{
+            padding:15px 5px 15px 5px;
+        }
+    }
+
+@media (max-width:1300px){
+    .Producten {
+        width: 25%; /* Breedte van 100% voor 1 item per rij */
+        max-width: none; /* Geen maximale breedte meer nodig */
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    #SMTitle > ul{
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-around;
+        align-items: center; 
+        
+    }
+    #Productfoto{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #Foto1 {
+         margin-right:0rem;
+     }
+     #Productfoto-lijst{
+         margin-left:0rem;
+     }
+    .FPF{
+    
+        width: 60%;
+     }
+    #NTitel{
+
+        font-size:1.2rem;
+    }
+    #NTekst{
+        font-size:1rem;
+        margin:0;
+        margin-top:1rem;
+        
+    }
+    #ATitel{
+       
+        font-size:1.2rem;
+    }
+        
+    #ATekst{
+        font-size:1rem;
+        margin:0;
+        margin-top:1rem;
+    }
+    .RPimages {
+        width:60%;
+    }
+    #contact fieldset {
+        padding: 0rem 15rem 1rem 15rem;  
+      }
+ }
+
+ /*klanten*/
+ .klanten-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  /* Opmaak voor klantkaarten */
+  .klant {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+  }
+  .klant img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+ @media (max-width:1000px){
+    .Producten {
+        width: 40%; /* Breedte van 100% voor 1 item per rij */
+        max-width: none; /* Geen maximale breedte meer nodig */
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    #contact fieldset {
+        padding: 0rem 8rem 1rem 8rem;  
+      }
+ }
+
+ @media (max-width:760px){
+    .Producten {
+        width: 70%; /* Breedte van 100% voor 1 item per rij */
+        max-width: none; /* Geen maximale breedte meer nodig */
+        margin-right: 1rem;
+        margin-left: 1rem;
+        
+    }
+    
+    body {
+        grid-template-areas:
+            "header header header header"
+            "nav nav nav nav"
+            "main main main main"
+            "aside aside aside aside"
+            "footer footer footer footer";
+    }
+    .wishlist-btn{
+        margin-top:0.5rem;
+        margin-bottom:0.5rem;
+    }
+    .Producten ul{
+        font-size: larger;
+    }
+    #RPTitel{
+        font-size:1.2rem;
+    }
+
+    #About h2{
+    padding-bottom: 0rem;
+    font-size:1.2rem;
+    }
+    #contact fieldset {
+        padding: 0rem 5rem 1rem 5rem;  
+      }
+
+#About p{
+    font-size:1rem;
+}
+
+
+    @media (max-width:450px){
+    }
+    #NTitel{
+
+       font-size:1rem;
+    }
+   #NTekst{
+       font-size:0.8rem;
+       margin:0;
+       margin-top:1rem;
+       
+    }
+   #ATitel{
+      
+       font-size:1rem;
+    }
+       
+   #ATekst{
+       font-size:0.8rem;
+       margin:0;
+       margin-top:1rem;
+    }
+   #Newsletter{
+    width:100%;
+
+   }
+   #Aanbevelingen{
+    width:100%;
+
+   }
+}
+
+    
+ 

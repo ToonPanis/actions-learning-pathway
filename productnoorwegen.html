@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productpagina</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/WishlistScript.js" defer=""></script>
+    <script src="js/scriptShop.js" defer=""></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/Images/Logo.png" alt="inspired-logo" width="100px">
+        </a>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html" class="button">Home</a>
+            </li>
+            <li>
+                <a href="shop.html" class="button">Shop</a>
+            </li>
+            <li>
+                <a href="contact.html" class="button">Contact</a>
+            </li>
+            <li>
+                <a href="klanten.html" class="button">Klanten</a>
+            </li>
+            <li>
+                <search>
+                    <form action="#">
+                        <label>
+                        <img src="assets/Images/searchblack.png" width="130px" height="130px"><input type="search" id="query" placeholder="zoeken">
+                        </label>
+                    </form>
+                </search>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main>
+
+   
+    <section id="Productfoto">
+            <img src="assets/Images/pexels-gashif-rheza-3262554.jpg"alt="Noorwegen" width="400px" id="Foto1">
+    
+        <ul id="Productfoto-lijst">
+            <li><h1> Excursie Noorwegen</h1></li>
+            
+            <li>
+            Noorwegen, een land doordrenkt van epische fjorden, betoverende natuurlijke schoonheid en een diepe verbinding met zijn Vikingverleden, is als een ansichtkaart die tot leven komt.
+            <br></br>
+
+            Steden als Oslo, Bergen en Trondheim zijn levendige centra van cultuur, waar moderne architectuur samensmelt met historische charme. De Noorse folklore en traditionele ambachten, evenals de hedendaagse kunstscene, geven een diepgaand inzicht in de rijke culturele erfgoed van het land.
+            </li>  
+            <li><h2> €1400</h2></li>
+            
+            <li><button class="product-btn" data-index="0">Toevoegen aan winkelmandje</button></li>
+
+        </ul>
+    </section>
+
+    <h1>Similar Products</h1>
+    
+
+    <section id="SMTitle">
+        <ul>
+            <li class="SMFoto"><figure><img src="assets/Images/pexels-mateusz-sałaciak-4275887.jpg" width="400px"><figcaption>Excursie Zwitserland<br>€1400</figcaption></figure></li>
+
+            <li class="SMFoto"><figure><img src="assets/Images/pexels-tyler-tornberg-1588989.jpg" width="400px"><figcaption>Excursie surfen Nazaré<br>€1000</figcaption></figure></li>
+    
+            <li class="SMFoto"><figure><img src="assets/Images/pexels-saúl-sigüenza-18450877.jpg"width="400px"><figcaption>Excursie latijns Amerika<br>€1400</figcaption></figure></li>
+        </ul>
+    </section>
+
+    <h1>Deel je ervaring met ons!</h1>
+
+    <section id="contact">
+    <form action="#" method="post" class="contactform">
+        <fieldset>
+            <legend>gegevens</legend>
+            <label for="email"></label>
+            <input type="email" name="email" placeholder="e-mail" required=""><br>
+        </fieldset>
+        <fieldset>
+            <legend>review</legend>
+            <label for="message"></label>
+                <textarea name="message" id="message" placeholder="bericht" rows="6" required=""></textarea><br>
+        </fieldset>
+    </fieldset>
+    <button type="submit" value="verzenden" class="button">verzenden</button>
+    </section>
+</main>
+
+    
+    <aside>
+        <section id="wishlist">
+            <h2>Wishlist</h2>
+            <ul id="wishlist-lijst"></ul>
+        </section>
+        <section id="winkelmandje">
+            <h2>Winkelmandje</h2>
+            <ul id="winkelmand-lijst">
+               
+            </ul>
+            <p id="totaal-bedrag">Totaal: €0</p>
+            <button id="afrekenen-btn">Afrekenen</button>
+        </section>
+    </aside>
+          
+        
+    <footer>
+        <a href="#logo"><img src="assets/Images/Logo.png" alt="logobottom" width="100px"></a><br>
+        <adress>Melkmarkt 37-39 2000 Antwerpen</adress>
+        <h2>Socials of Inspired</h2>
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/"><img src="assets/Images/Instagram.png" alt="logobottom" width="50px"></a>
+            </li>
+            <li>
+                <a href="https://nl-nl.facebook.com/"><img src="assets/Images/facebook.png" alt="logobottom" width="50px"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/?lang=nl"><img src="assets/Images/twitter.png" alt="logobottom" width="50px"></a>
+            </li>
+        </ul>
+
+    </footer>
+</body>
+</html>
